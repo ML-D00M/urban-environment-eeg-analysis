@@ -8,7 +8,7 @@ Our research investigates how different urban environments (highways, boulevards
 
 ## Repository Structure
 
-- `eeg_analysis/`: Contains MATLAB scripts for EEG and ISC analysis
+- `EEG_preprocessing_and_ISC_analysis_scripts/`: Contains MATLAB scripts for EEG and ISC analysis
   - `step1_extractTriggers.m`: Extract triggers and align them with EEG recordings
   - `step2_segmentation.m`: Segment EEG data based on video stimuli
   - `step3_TemporalAlignment.m`: Align EEG data temporally
@@ -16,12 +16,10 @@ Our research investigates how different urban environments (highways, boulevards
   - `step5_isceeg_with_time_windows.m`: Perform ISC analysis
   - `step6_ISC_in_frequency_bands.m`: Analyze ISC in different frequency bands
   - `step7_topoplots_in_delta.m`: Generate topoplots for delta band
-- `statistical_analysis/`: Contains R scripts for statistical analysis
-  - `anova_and_post_hoc.R`: Perform ANOVA and post-hoc tests on ISC results
-  - `plot_results.R`: Generate plots for ISC results
-  - `questionnaire_analysis.R`: Analyze questionnaire data
-- `data/`: Contains example data (or instructions for accessing full dataset)
-- `results/`: Contains output from analysis scripts
+  - Additional utility functions used in scripts
+- `Statistical_analysis_scripts/`: Contains R scripts for statistical analysis
+  - `Statistical_analysis_All_&_Frequency_bands.R`: Perform ANOVA and post-hoc tests on ISC results. Generate plots for ISC results
+  - `Statistical_analysis_Questionnaire.R`: Analyze questionnaire data
 
 ## Getting Started
 
@@ -29,7 +27,6 @@ Our research investigates how different urban environments (highways, boulevards
 
 For EEG analysis:
 - MATLAB (version X.X or higher)
-- [Add other necessary MATLAB toolboxes]
 
 For statistical analysis:
 - R (version X.X.X or higher)
@@ -38,13 +35,16 @@ For statistical analysis:
 ### Running the Analysis
 
 1. Clone this repository
-2. [Add Instructions for accessing or simulating data]
-3. Run the MATLAB scripts in numerical order (step1 through step7) in the `eeg_analysis/` folder
-4. Run the R scripts in the `statistical_analysis/` folder
+2. Clone the data (see below)
+3. In all scripts, replace the <your-path-to-data> placeholder for your actual paths to data
+4. Run the MATLAB scripts in numerical order (step1 through step7) in the `EEG_preprocessing_and_ISC_analysis_scripts/` folder
+5. Run the R scripts in the `Statistical_analysis_scripts/` folder:
+  - first, the `Statistical_analysis_All_&_Frequency_bands.R` script - on the resulted data from the previous step (EEG and ISC)
+  - second, the `Statistical_analysis_Questionnaire.R` script on the questionnaire data (see below)
 
 ## Data
 
-Due to privacy concerns, the full dataset is not included in this repository. A sample dataset is provided in the `data/` folder for testing purposes. For access to the full dataset, please contact [your contact information].
+For access to the full dataset with fully anonymized EEG data and questionnaires data from our experiments, please use [this link](add_link_to_the_data).
 
 ## License
 
@@ -60,9 +60,9 @@ If you use this code or data in your research, please cite our paper:
 
 [Name] - [Email]
 
-Project Link: [https://github.com/yourusername/urban-environment-eeg-analysis](https://github.com/yourusername/urban-environment-eeg-analysis)
+Project Link: [https://github.com/ML-D00M/urban-environment-eeg-analysis](https://github.com/ML-D00M/urban-environment-eeg-analysis)
 
 ## Acknowledgments
 
-- [Add acknowledgments you want to include]
+- [Add acknowledgments]
 - Thanks to all participants in our study
